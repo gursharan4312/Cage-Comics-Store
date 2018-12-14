@@ -1,0 +1,14 @@
+<div class="comic-full">
+  <div class="header-comic">
+    <img src="{{ comic['imageURL'] }}" alt="{{ comic['name'] }}">
+    <div class="comic-detail">
+      <h2>{{ comic['name'] }}</h2>
+      <span class="autor">{{ comic['author'] }}</span>
+      <span class="price">${{ comic['price'] }}</span>
+      <button type="button" value="{{ comic['id'] }}" name="addToCart" class="addToCart">Add to Cart</button>
+    </div>
+  </div>
+  <div class="comic-description">
+    <p>{{ comic['description'] }}</p>
+  </div>
+</div>

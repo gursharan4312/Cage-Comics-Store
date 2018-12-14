@@ -1,0 +1,14 @@
+<div class="offers">
+  <h1>This Week's Feature.</h1>
+{% for comic in comics %}
+<form action="index.php">
+<div class="comic">
+  <h3>{{ comic["name"] }}</h3>
+  <img src="{{ comic['imageURL'] }}" alt="{{ comic['name'] }}">
+  <div class="comic-desc"><p></p></div>
+  <button type="button" value="{{ comic['id'] }}" name="addToCart" class="addToCart" >Add to Cart</button>
+  <button type="button"><a href="comic.php?id={{ comic['id'] }}" class="seeDetails">See Details</a></button>
+</div>
+</form>
+{% endfor %}
+</div>

@@ -1,0 +1,15 @@
+<div class="offers">
+  <h1>Top Auctions</h1>
+{% for comic in comics %}
+<form action="auction.php">
+<div class="comic">
+  <h3>{{ comic["name"] }}</h3>
+  <img src="{{ comic['imageURL'] }}" alt="{{ comic['name'] }}">
+  <div class="comic-desc"><p>{{ comic['description'] }}</p></div>
+  <div class="timeLeft">xx:xx:xxxx</div>
+  <input type="text" placeholder="Enter BID Price" name="bidPrice">
+  <button type="submit" name="auctionId" value="{{ comic['id'] }}">BID</button>
+</div>
+</form>
+{% endfor %}
+</div>

@@ -1,0 +1,12 @@
+  <form id="{{ formID }}" class="form">
+    <div id="error"></div>
+    {% for inputGroup in inputGroups %}
+    <div class="inputGroup">
+      <label for="{{ inputGroup['id' ] }}">{{ inputGroup['label'] }}</label>
+      <input type="{{ inputGroup['type' ] }}" id="{{ inputGroup['id' ] }}" name="{{ inputGroup['name' ] }}" placeholder="{{ inputGroup['placeHolder' ] }}">
+    </div>
+    {% endfor %}
+    {% for button in buttons %}
+    <button type="{{button['type']}}" name="{{button['name']}}" class="formBtn" id="{{button['id']}}" value="{{button['value']}}">{{button['value']}}</button>
+    {% endfor %}
+  </form>

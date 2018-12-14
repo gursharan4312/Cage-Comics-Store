@@ -1,0 +1,16 @@
+<div class="table-center">
+  <table>
+    <tr>
+    {% for item in heading %}
+    <th>{{ item }}</th>
+    {% endfor %}
+    </tr>
+    {% for rows in data %}
+    <tr>
+      {% for coloumn in rows %}
+      <td>{{ coloumn }}</td>
+      {% endfor %}
+    </tr>
+    {% endfor %}
+  </table>
+</div>
