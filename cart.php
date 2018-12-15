@@ -46,4 +46,5 @@ mysqli_close($conn);
     "heading" => array('Name','Author','Price','Quantity','Total Price'),
     "data" => $cartItems
   ));
+  echo $twig->render('footer.html');
  ?>

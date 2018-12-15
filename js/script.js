@@ -58,5 +58,4 @@ $(document).on("submit","#form",function(e){
       }
     })
 })
-
-})
+}); // end document.ready

@@ -21,7 +21,7 @@ if($_POST["submitBtn"]=="Login"){
            if ($result = mysqli_use_result($conn)) {
                while($row = mysqli_fetch_row($result)) {
                  if(strcmp($_POST['passwd'],$row[5])==0){
-                   $user=array("id"=>$row[0],"name"=>$row[1]);
+                   $user=array("id"=>$row[0],"name"=>$row[1],"email"=>$row[2],"phone"=>$row[3]);
                    $userFound=true;
                  }
                }

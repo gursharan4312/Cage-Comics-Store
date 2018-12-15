@@ -6,6 +6,8 @@
 body{
   max-width: 1680px;
   margin: 0 auto;
+  min-height: 100vh;
+  position: relative;
 }
 header{
   background: white;
@@ -43,6 +45,7 @@ header{
   }
 }
 main{
+  padding-bottom: 20px;
     .hero{
       background-image: url("hero-image.jpg");
       background-repeat: no-repeat;
@@ -158,8 +161,44 @@ table{
     }
   }
 }
+#profile{
+  text-align: center;
+  margin: 30px auto;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 50%;
+  padding: 20px;
+  h2{
+    padding: 15px 0px;
+  }
+  p{
+    padding: 5px;
+  }
+  button{
+    margin-top: 20px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #bbb;
+    box-shadow: 3px 3px 2px #aaa;
+    position: relative;
+    font-weight: bold;
+  }
+  button:hover{
+    cursor: pointer;
+    top: -1px;
+  }
+  button:active{
+  top:2px;
+  }
+}
 footer{
   text-align: center;
-  margin: 20px;
+  // margin: 20px;
+  padding: 20px;
   color: #aaa;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  // height: 20px;
 }

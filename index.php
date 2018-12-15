@@ -8,7 +8,7 @@ require_once("twig.php");
       $_SESSION['cartItems']=array(); // session variable to save ids of comics added to cart
   }
   if(!isset($_SESSION['user'])){
-    $_SESSION['user']=array("name"=>"Guest","id"=>1); // variable to hold user information
+    $_SESSION['user']=array("name"=>"Guest","id"=>1,"email"=>"guest@cageComics.com","phone"=>"0000000000"); // variable to hold user information
   }
 
     // session navbar that holds userinformation and navigation menus
@@ -38,7 +38,7 @@ require_once("twig.php");
     if($_SESSION['user']["id"]==1){
       array_push($_SESSION["navbar"],array("Login","login.php"));
     }else{
-      array_push($_SESSION["navbar"],array("Sign out","login.php"));
+      array_push($_SESSION["navbar"],array($_SESSION['user']['name'],"profile.php"));
     }
 
 // rendering webpage
